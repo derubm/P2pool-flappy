@@ -19,7 +19,7 @@ SUBSIDY_FUNC = lambda height: 50*100000000 (height + 1)//750000,
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data))
 BLOCK_PERIOD = 60 # s
 SYMBOL = 'FLAP'
-CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'flappycoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/flappycoin/'$
+CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Flappycoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/Flappycoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.flappycoin'), 'flappycoin.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'http://blockcrawler.rf.gd/index.php'
 ADDRESS_EXPLORER_URL_PREFIX = 'http://blockcrawler.rf.gd/index.php'
 TX_EXPLORER_URL_PREFIX = 'http://blockcrawler.rf.gd/index.php'
