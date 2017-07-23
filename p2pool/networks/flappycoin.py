@@ -11,8 +11,8 @@ PREFIX = 'd2c3c4c541c11dd9'.decode('hex')
 P2P_PORT = 65150
 MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
-PERSIST = True
+PERSIST = False
 WORKER_PORT = 65050
-BOOTSTRAP_ADDRS = '24.9.245.200 88.89.11.212 96.52.216.191 54.186.211.206 104.244.216.187'.split()
+BOOTSTRAP_ADDRS = ''.split()
 VERSION_CHECK = lambda v: None if 35 <= v else 'Flappycoin version too old. Upgrade to 0.10.4 or newer!'
 VERSION_WARNING = lambda v: None
