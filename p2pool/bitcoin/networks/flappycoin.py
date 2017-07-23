@@ -15,7 +15,7 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             'flappycoinaddress' in (yield bitcoind.rpc_help()) and
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
-SUBSIDY_FUNC = lambda height: 50*100000000 (height + 1)//750000,
+SUBSIDY_FUNC = lambda height: 50
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data))
 BLOCK_PERIOD = 60 # s
 SYMBOL = 'FLAP'
